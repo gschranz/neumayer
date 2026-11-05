@@ -79,8 +79,8 @@
   /* ---- Hero ---- */
   .hero{position:relative;isolation:isolate;color:#fff}
   .hero img{width:100%;height:min(74vh,720px);object-fit:cover}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,12,10,.78) 0%,rgba(20,12,10,.5) 45%,rgba(20,12,10,.12) 100%)}
-  .hero-inner{position:absolute;inset:0;display:flex;align-items:center}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(20,12,10,.88) 0%,rgba(20,12,10,.72) 32%,rgba(20,12,10,.34) 62%,rgba(20,12,10,.10) 100%)}
+  .hero-inner{position:absolute;inset:0;z-index:2;display:flex;align-items:center}
   .hero-copy{max-width:640px}
   .hero h1{color:#fff;margin-bottom:.35em}
   .hero h1 em{font-style:normal;color:#F0CE93}
@@ -208,7 +208,7 @@
   <div class="hero-inner">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="kicker">Weinbau &amp; Heuriger · Perchtoldsdorf bei Wien</p>
+        <p class="kicker">Weinbau &amp; Heuriger · Perchtoldsdorf</p>
         <h1>Heuriger, wie er sein soll. <em>Seit 40 Jahren.</em></h1>
         <p>Eigener Weinkeller, Küche den ganzen Tag, Gastgarten unter den Reben und ein Blick über Wien, den man nicht vergisst. Mitten in Perchtoldsdorf, 15 Minuten von Wien.</p>
         <div class="hero-actions">
