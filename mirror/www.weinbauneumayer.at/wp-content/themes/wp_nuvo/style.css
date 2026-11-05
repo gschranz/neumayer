@@ -1,0 +1,44 @@
+/*
+Theme Name: WP Nuvo
+Theme URI: http://demo.cmssuperheroes.com/themeforest/wp-nuvo
+Author: CMSSuperHeroes
+Author URI: http://themeforest.net/user/CMSSuperHeroes
+Version: 6.1.0
+License: ThemeForest
+License URI: https://themeforest.net/licenses
+Tags:  	bar, bistro, cafe, cafeteria, family restaurant, food, lunch, menu, pub, restaurant, restaurant theme, restaurant wordpress theme, take away, wine, wordpress restaurant theme 
+Description: Modern and sophisticated: these are the two words that best describe NUVO which is a Wordpress Restaurant Theme specifically built for sites run by restaurant, café and bistro owners. Each establishment has a style and feel of its own and this Wordpress Restaurant Theme gives you the ability to choose between various demos that cater to each type of food establishment. Rest assured that you can find a design that will perfectly match your business whether it’s a Restaurant, Café or Bistro.
+Text Domain: wp_nuvo
+*/
+
+/**
+ * Table of Contents:
+ *
+*/
+
+/** Style all option css **/
+@import "css/dynamic.css";
+
+/** Used to describe fonts for site **/
+@import "css/fonts.css";
+
+/** Style all button site **/
+@import "css/buttons.css";
+
+/** Style mobule and type title module **/
+@import "css/module.css";
+
+/** Style all menu site **/
+@import "css/menu.css";
+
+/** Style all shortcode site **/
+@import "css/shortcodes.css";
+
+/** Style base consilium site **/
+@import "css/style.min.css";
+
+/** Style RTL **/
+@import "style-rtl.css";
+
+/** Style reponsive **/
+@import "css/responsive.css";

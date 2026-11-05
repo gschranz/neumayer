@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Weinbau &amp; Heuriger Neumayer — Heuriger in Perchtoldsdorf | Redesign-Draft</title>
+<meta name="description" content="Heuriger und Weinbau in Perchtoldsdorf bei Wien. Ausstecktermine, KOSTBAR in ROT, Fackelwanderung, Heurigenboxen. Tisch reservieren unter 0664 2110825.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --weinrot:#6B1520;
+    --weinrot-hell:#8C2230;
+    --ocker:#C08A3E;
+    --papier:#FAF6EF;
+    --papier-2:#F1EADE;
+    --ink:#1F1B17;
+    --ink-soft:#5A5148;
+    --linie:#DED4C4;
+    --gruen:#3F5233;
+    --radius:4px;
+    --maxw:1200px;
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --text:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--papier);color:var(--ink);
+    font-family:var(--text);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--weinrot);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0 0 .6em;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,5.6vw,4rem)}
+  h2{font-size:clamp(1.6rem,3.4vw,2.6rem)}
+  h3{font-size:1.15rem;letter-spacing:0}
+  p{margin:0 0 1.1em;color:var(--ink-soft)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .kicker{
+    font-family:var(--text);font-size:.72rem;font-weight:600;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ocker);margin:0 0 .9em
+  }
+
+  /* ---- Statusleiste ---- */
+  .statusbar{background:var(--gruen);color:#EDE7DA;font-size:.85rem}
+  .statusbar .wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:9px;padding-bottom:9px}
+  .status{display:flex;align-items:center;gap:9px;font-weight:500}
+  .dot{width:9px;height:9px;border-radius:50%;background:#8FC97A;box-shadow:0 0 0 4px rgba(143,201,122,.22);flex:0 0 auto}
+  .statusbar a{color:#EDE7DA;text-decoration:underline;text-underline-offset:3px}
+  .statusbar span.sep{opacity:.45}
+
+  /* ---- Header ---- */
+  header.site{background:var(--papier);border-bottom:1px solid var(--linie);position:sticky;top:0;z-index:20}
+  .navrow{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0}
+  .brand{display:flex;flex-direction:column;line-height:1.1}
+  .brand strong{font-family:var(--display);font-weight:700;font-size:1.32rem;letter-spacing:.01em;color:var(--weinrot)}
+  .brand small{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+  nav.main{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  nav.main a{font-size:.93rem;font-weight:500;color:var(--ink)}
+  nav.main a[aria-current="page"]{color:var(--weinrot);box-shadow:inset 0 -2px 0 var(--ocker)}
+  .navcta{display:flex;gap:10px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:46px;padding:12px 22px;border-radius:var(--radius);
+    font-size:.93rem;font-weight:600;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--weinrot);color:#fff}
+  .btn-primary:hover{background:var(--weinrot-hell);text-decoration:none}
+  .btn-ghost{border-color:var(--linie);color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--ink);text-decoration:none}
+  .btn-white{background:#fff;color:var(--weinrot)}
+  .btn-white:hover{text-decoration:none;background:var(--papier-2)}
+  .burger{display:none;min-height:44px;min-width:44px;border:1px solid var(--linie);border-radius:var(--radius);background:transparent;align-items:center;justify-content:center}
+
+  /* ---- Hero ---- */
+  .hero{position:relative;isolation:isolate;color:#fff}
+  .hero img{width:100%;height:min(74vh,720px);object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,12,10,.78) 0%,rgba(20,12,10,.5) 45%,rgba(20,12,10,.12) 100%)}
+  .hero-inner{position:absolute;inset:0;display:flex;align-items:center}
+  .hero-copy{max-width:640px}
+  .hero h1{color:#fff;margin-bottom:.35em}
+  .hero h1 em{font-style:normal;color:#F0CE93}
+  .hero p{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:48ch}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .hero-meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;font-size:.86rem;color:rgba(255,255,255,.82)}
+  .hero-meta b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:600;color:#fff}
+
+  /* ---- Sektionen ---- */
+  section{padding:88px 0}
+  section.tight{padding:64px 0}
+  .alt{background:var(--papier-2)}
+  .dark{background:var(--ink);color:#EDE7DA}
+  .dark h2,.dark h3{color:#fff}
+  .dark p{color:rgba(237,231,218,.78)}
+  .head{max-width:660px;margin-bottom:48px}
+  .grid{display:grid;gap:26px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+
+  .card{background:#fff;border:1px solid var(--linie);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .card img{height:210px;object-fit:cover;width:100%}
+  .card-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .card .date{font-family:var(--display);font-size:1.9rem;font-weight:700;color:var(--weinrot);line-height:1}
+  .card .date small{display:block;font-family:var(--text);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px}
+  .card p{font-size:.95rem;margin:0}
+  .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:var(--papier-2);color:var(--weinrot);width:fit-content}
+  .tag.warn{background:#FBEAD2;color:#8A5A12}
+
+  .usp{display:flex;gap:18px;align-items:flex-start}
+  .usp .num{font-family:var(--display);font-size:1.55rem;font-weight:600;color:var(--ocker);line-height:1;min-width:34px}
+  .usp h3{margin-bottom:.25em}
+  .usp p{font-size:.95rem;margin:0}
+
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .split img{border-radius:var(--radius);height:100%;object-fit:cover;min-height:380px}
+  .wl{list-style:none;margin:0;padding:0;border-top:1px solid var(--linie)}
+  .wl li{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--linie)}
+  .wl b{font-weight:600;display:block}
+  .wl span{color:var(--ink-soft);font-size:.9rem}
+  .wl i{font-family:var(--display);color:var(--ocker);font-style:normal;font-size:.9rem;white-space:nowrap}
+
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;border-top:1px solid rgba(255,255,255,.16);padding-top:40px;margin-top:8px}
+  .facts b{display:block;font-family:var(--display);font-size:2.3rem;font-weight:600;color:#F0CE93;line-height:1}
+  .facts span{font-size:.88rem;color:rgba(237,231,218,.75)}
+
+  /* ---- Footer ---- */
+  footer.site{background:var(--ink);color:rgba(237,231,218,.72);padding:72px 0 36px;font-size:.92rem}
+  footer.site .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:40px}
+  footer.site h4{font-family:var(--text);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+  footer.site a{color:rgba(237,231,218,.88)}
+  footer.site ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+  footer.site .legal{border-top:1px solid rgba(255,255,255,.14);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem}
+  .hours{font-variant-numeric:tabular-nums}
+
+  /* Mobile CTA-Leiste */
+  .mobile-cta{display:none}
+
+  @media (max-width:1000px){
+    nav.main{display:none}
+    .burger{display:flex}
+    .navcta .btn-ghost{display:none}
+    .split{grid-template-columns:1fr;gap:32px}
+    .g4,.facts{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:repeat(2,1fr)}
+    footer.site .cols{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .wrap{padding:0 18px}
+    section{padding:56px 0}
+    .g2,.g3,.g4,.facts{grid-template-columns:1fr}
+    .hero img{height:64vh;min-height:420px}
+    .hero::after{background:linear-gradient(180deg,rgba(20,12,10,.5) 0%,rgba(20,12,10,.82) 100%)}
+    .hero-inner{align-items:flex-end;padding-bottom:76px}
+    .hero-actions .btn{width:100%}
+    .hero-meta{gap:18px;margin-top:24px}
+    nav.main{display:none}
+    footer.site .cols{grid-template-columns:1fr}
+    .mobile-cta{
+      display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:40;
+      background:rgba(250,246,239,.97);backdrop-filter:blur(8px);border-top:1px solid var(--linie);
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    }
+    body{padding-bottom:78px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Statusleiste: beantwortet die wichtigste Frage sofort -->
+<div class="statusbar">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Heute ausgesteckt&nbsp;·&nbsp;<span class="hours">10:30 – 23:00</span>&nbsp;·&nbsp;Gastgarten offen</div>
+    <div>Nächster Termin:&nbsp;<a href="#termine">Stelzen-Wochenende, 7. &amp; 8. November</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="/" aria-label="Weinbau und Heuriger Neumayer, Startseite">
+      <strong>Weinbau &amp; Heuriger Neumayer</strong>
+      <small>Perchtoldsdorf seit 1986</small>
+    </a>
+    <nav class="main" aria-label="Hauptnavigation">
+      <a href="#heuriger">Heuriger</a>
+      <a href="#speisen">Speisen &amp; Wein</a>
+      <a href="#termine" aria-current="page">Termine</a>
+      <a href="#feiern">Feiern</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="tel:+436642110825">0664 2110825</a>
+      <a class="btn btn-primary" href="#reservieren">Tisch reservieren</a>
+      <button class="burger" aria-label="Menü öffnen">
+        <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="2" y="0" fill="#1F1B17"/><rect width="20" height="2" y="6" fill="#1F1B17"/><rect width="20" height="2" y="12" fill="#1F1B17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="assets/hero-terrasse.jpg" alt="Gedeckte Holztische auf der Terrasse des Heurigen Neumayer im Abendlicht, dahinter Weingärten" width="1920" height="1080">
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="kicker">Weinbau &amp; Heuriger · Perchtoldsdorf bei Wien</p>
+        <h1>Heuriger, wie er sein soll. <em>Seit 40 Jahren.</em></h1>
+        <p>Eigener Weinkeller, Küche den ganzen Tag, Gastgarten unter den Reben und ein Blick über Wien, den man nicht vergisst. Mitten in Perchtoldsdorf, 15 Minuten von Wien.</p>
+        <div class="hero-actions">
+          <a class="btn btn-white" href="tel:+436642110825">Anrufen &amp; Tisch sichern</a>
+          <a class="btn btn-ghost" href="#termine" style="color:#fff;border-color:rgba(255,255,255,.55)">Ausstecktermine ansehen</a>
+        </div>
+        <div class="hero-meta">
+          <div><b class="hours">10:30–23:00</b>Montag bis Samstag</div>
+          <div><b class="hours">10:30–22:30</b>Sonntag &amp; Feiertag</div>
+          <div><b>24 Std.</b>Getränkeautomat im Eingang</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Termine -->
+<section id="termine">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Save the Date</p>
+      <h2>Die nächsten Ausstecktermine</h2>
+      <p>Wir stecken bis zu zehnmal im Jahr aus. Diese Termine sollten Sie im Kalender haben — für die meisten empfehlen wir eine zeitnahe Reservierung.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <img src="assets/hero-terrasse.jpg" alt="Stelzen-Wochenende beim Heurigen Neumayer">
+        <div class="card-body">
+          <span class="tag warn">Bestellung bis 5. 11.</span>
+          <p class="date">07.–08.<small>November</small></p>
+          <h3>Stelzen-Wochenende</h3>
+          <p>Unsere legendären Stelzen — im Lokal oder zum Abholen. Senf, Kren, Krautsalat, Brot und Wein nach Wahl. Vorbestellung unbedingt erforderlich.</p>
+          <p style="margin-top:auto"><a href="tel:+436642110825">Stelze bestellen: 0664 2110825</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/kostbar.jpg" alt="Vier Weingläser mit Rotwein bei Kerzenlicht">
+        <div class="card-body">
+          <span class="tag">Verkostung</span>
+          <p class="date">KOSTBAR<small>in ROT</small></p>
+          <h3>Vier Weine, ein Brett</h3>
+          <p>Blauer Portugieser, Pinot Noir, Zweigelt und Zweigelt Barrique — je 80 ml, allein oder zu zweit. Unsere Art der Weinverkostung.</p>
+          <p style="margin-top:auto"><a href="#speisen">Zur Weinliste</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="assets/weinkeller.jpg" alt="Weinkeller mit Eichenfässern">
+        <div class="card-body">
+          <span class="tag">Menüabend</span>
+          <p class="date">28.<small>November</small></p>
+          <h3>Engerl &amp; Bengerl</h3>
+          <p>Licht aus, Kerzen an: ein besinnlicher Abend mit zwei 3-Gänge-Menüs zur Wahl. Inklusive Frizzante und Gruß aus der Küche, €41 pro Menü.</p>
+          <p style="margin-top:auto"><a href="tel:+436642110825">Reservieren: 0664 2110825</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Was uns ausmacht -->
+<section id="heuriger" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Warum Neumayer</p>
+      <h2>Vier Dinge, die es woanders nicht gibt</h2>
+    </div>
+    <div class="grid g2" style="gap:36px 56px">
+      <div class="usp">
+        <div class="num">01</div>
+        <div>
+          <h3>Fackelwanderung auf die Heide</h3>
+          <p>Wir verteilen Fackeln an Ihre Gäste und wandern gemeinsam in unsere Weingärten auf der Perchtoldsdorfer Heide. Oben wartet eine Erfrischung — und der Blick über ganz Wien.</p>
+        </div>
+      </div>
+      <div class="usp">
+        <div class="num">02</div>
+        <div>
+          <h3>KOSTBAR in ROT</h3>
+          <p>Vier unserer Weine, je 80 ml, auf einem Brett serviert. Die ehrlichste Art, unseren Keller kennenzulernen — ohne Flasche kaufen zu müssen.</p>
+        </div>
+      </div>
+      <div class="usp">
+        <div class="num">03</div>
+        <div>
+          <h3>Wein, wann Sie wollen</h3>
+          <p>Auch an Tagen ohne Ausstecken müssen Sie nicht verzichten: Unser Getränkeautomat im Eingangsbereich ist rund um die Uhr zugänglich — Wein, Traubensaft gespritzt, Traubensaft pur.</p>
+        </div>
+      </div>
+      <div class="usp">
+        <div class="num">04</div>
+        <div>
+          <h3>Heurigenboxen für Ihre Gäste</h3>
+          <p>Das fertig angerichtete Buffet ab 5 Personen: Klassik, Kärnten, Käse, Mediterran, Brötchen — auf Wunsch individuell zusammengestellt, mit Dessertbox.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Speisen & Wein -->
+<section id="speisen">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Speisen &amp; Wein</p>
+      <h2>Aus dem eigenen Keller, aus der eigenen Küche</h2>
+      <p>Vom gemischten Satz über Grünen Veltliner bis zum Zweigelt Barrique: Unsere Weine wachsen auf den Hängen über Perchtoldsdorf und werden im Haus ausgebaut. Dazu kommt, was die Jahreszeit hergibt — Spargel, Wild, Stelzen, und an Werktagen ein wechselndes Tagesmenü.</p>
+      <ul class="wl">
+        <li><div><b>Zweigelt Barrique</b><span>Voll im Geschmack, zartes Eichenfassaroma</span></div><i>Rot</i></li>
+        <li><div><b>Grüner Veltliner</b><span>Pfeffrig, würzige Frucht, jugendlich-frische Säure</span></div><i>Weiß</i></li>
+        <li><div><b>Blauer Portugieser</b><span>Weich und mild, samtige Tannine</span></div><i>Rot</i></li>
+        <li><div><b>Gelber Muskateller</b><span>Blumige Aromen, Duft nach Muskat</span></div><i>Weiß</i></li>
+      </ul>
+      <p style="margin-top:26px"><a class="btn btn-primary" href="#speisen">Komplette Weinliste &amp; Speisenkarte</a></p>
+    </div>
+    <img src="assets/kostbar.jpg" alt="Rotweinverkostung mit vier Gläsern bei Kerzenlicht" loading="lazy">
+  </div>
+</section>
+
+<!-- Feiern -->
+<section id="feiern" class="dark">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Feiern &amp; Seminare</p>
+      <h2>Ihre Feier — auch wenn wir nicht ausgesteckt haben</h2>
+      <p>Geburtstag, Hochzeit, Weihnachtsfeier oder Seminar: Wir richten Ihre Veranstaltung aus, wann und wie Sie möchten. Zwei Ebenen, ein eigenes Stüberl, im Sommer der Gastgarten.</p>
+    </div>
+    <div class="grid g3">
+      <div><h3>Hochzeit &amp; Familie</h3><p>Bis zu … Gäste, Menü nach Absprache, Kinderspielplatz und Spielecke für die Kleinen.</p></div>
+      <div><h3>Firma &amp; Seminar</h3><p>Stüberl mit Technik auf Anfrage, Pausenbetreuung aus der Küche, Weinverkostung als Programmpunkt.</p></div>
+      <div><h3>Fackelwanderung</h3><p>Das Extra, das bleibt: gemeinsame Wanderung in den Weingarten mit Wien-Blick. 20 Minuten Fußweg.</p></div>
+    </div>
+    <div class="facts">
+      <div><b>40</b><span>Jahre Familienbetrieb</span></div>
+      <div><b>2</b><span>Ebenen &amp; Stüberl</span></div>
+      <div><b>10×</b><span>Ausstecken pro Jahr</span></div>
+      <div><b>24 h</b><span>Getränkeautomat</span></div>
+    </div>
+    <p style="margin-top:40px"><a class="btn btn-white" href="#kontakt">Unverbindlich anfragen</a></p>
+  </div>
+</section>
+
+<!-- Reservieren -->
+<section id="reservieren" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Reservierung</p>
+      <h2>In drei Schritten zum Tisch</h2>
+      <p>Kein Formular-Dschungel: Datum, Uhrzeit, Personen — fertig. Wer lieber spricht, ruft an; wir sind unter <a href="tel:+436642110825">0664 2110825</a> für Sie da.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card" style="padding:26px 24px"><div class="card-body" style="padding:0">
+        <p class="kicker" style="margin-bottom:.4em">Schritt 1</p><h3>Wann?</h3>
+        <p>Kalender mit den Aussteckterminen — Tage, an denen wir ausgesteckt haben, sind markiert. Datum antippen, fertig.</p>
+      </div></div>
+      <div class="card" style="padding:26px 24px"><div class="card-body" style="padding:0">
+        <p class="kicker" style="margin-bottom:.4em">Schritt 2</p><h3>Uhrzeit &amp; Personen</h3>
+        <p>Nur realistisch buchbare Zeiten zwischen 10:30 und 21:00, Personenzahl über Stepper mit Plus und Minus statt Dropdown.</p>
+      </div></div>
+      <div class="card" style="padding:26px 24px"><div class="card-body" style="padding:0">
+        <p class="kicker" style="margin-bottom:.4em">Schritt 3</p><h3>Kontakt</h3>
+        <p>Name, Telefon oder E-Mail — keine Registrierung, keine Pflichtfelder über das Notwendige hinaus. Bestätigung sofort per SMS oder Mail.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Kontakt &amp; Anfahrt</p>
+      <h2>Wir freuen uns auf Ihren Besuch</h2>
+      <p>
+        Weinbau &amp; Heuriger Neumayer<br>
+        Sonnbergstraße 89<br>
+        2380 Perchtoldsdorf, Österreich
+      </p>
+      <p>
+        Telefon <a href="tel:+436642110825">+43 664 211 08 25</a><br>
+        <span class="hours">Mo–Sa 10:30–23:00 · So 10:30–22:30</span>
+      </p>
+      <p style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="tel:+436642110825">Jetzt anrufen</a>
+        <a class="btn btn-ghost" href="#kontakt">Route planen</a>
+      </p>
+    </div>
+    <img src="assets/fackelwanderung.jpg" alt="Weg durch die Weingärten auf der Perchtoldsdorfer Heide im Abendlicht, im Hintergrund Wien" loading="lazy">
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Weinbau &amp; Heuriger Neumayer</h4>
+        <p style="color:rgba(237,231,218,.72)">Familienbetrieb seit 40 Jahren. Eigener Weinbau im Weinbaugebiet Thermenregion, Heuriger mit Küche den ganzen Tag.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="#heuriger">Heuriger</a></li>
+          <li><a href="#speisen">Speisen &amp; Wein</a></li>
+          <li><a href="#termine">Ausstecktermine</a></li>
+          <li><a href="#feiern">Feiern</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Öffnungszeiten</h4>
+        <ul class="hours">
+          <li>Mo–Sa 10:30–23:00</li>
+          <li>So 10:30–22:30</li>
+          <li style="margin-top:8px"><a href="#heuriger">Ausstecktermine</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Sonnbergstraße 89<br>2380 Perchtoldsdorf</li>
+          <li><a href="tel:+436642110825">+43 664 211 08 25</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Weinbau &amp; Heuriger Neumayer</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Barrierefreiheit</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="group" aria-label="Schnellaktionen">
+  <a class="btn btn-ghost" href="tel:+436642110825">Anrufen</a>
+  <a class="btn btn-primary" href="#reservieren">Reservieren</a>
+</div>
+
+</body>
+</html>
