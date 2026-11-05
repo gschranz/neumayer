@@ -60,7 +60,7 @@ Moderner, mobile-first Auftritt für einen Familien-Heurigen mit Weinbau in Perc
 |---|---|---|
 | Bilderwelt in Altbestand (2014/2016/2018, gemischt, teils 2 MB) | 🟡 offen | Neue Bildwelt erst nach Fotofreigabe; Draft nutzt Platzhalter + generierte Motive |
 | Kein Zugang zu Server/Hosting/DNS | 🟡 offen | Quick Wins als Patch-Liste für Agentur übergeben |
-| Öffnungszeiten widersprüchlich („Mo–Sa 10:30–23:00" vs. „bis zu zehn mal im Jahr") | 🟡 fachlich klären | Betreiber-Interview nötig vor IA-Finalisierung |
+| Öffnungszeiten widersprüchlich („bis zu zehn mal" im Text vs. **acht** Termine auf dem Plakat) | ✅ geklärt 2026-11-05 | 2026 und 2027 je 8 Aussteckzeiträume (Sa–So), 2026 = 177 Tage; Mo–Sa 10:30–23:00 / So 10:30–22:30 gelten nur in diesen Zeiträumen. Bestätigung durch Betreiber noch ausstehend |
 | WooCommerce aktiv, aber ungenutzt (Shop-Ballast, Sicherheitsfläche) | 🟡 offen | Beim Relaunch entscheiden: Ab-Hof-Bestellstrecke ja/nein |
 | Bestehende Agentur (jeromedia.eu) hält Zugänge | 🟡 offen | Zugänge klären, bevor Umsetzung startet |
 | Higgsfield-CLI: Browser-OAuth-Callback zeigt auf `localhost:8765` | ✅ gelöst 2026-11-05 | Callback-URL aus der Adresszeile an den lokalen Listener gereicht (PKCE bleibt gültig); Ablauf dokumentiert in `docs/setup-higgsfield-cli.md` |
@@ -81,9 +81,9 @@ Moderner, mobile-first Auftritt für einen Familien-Heurigen mit Weinbau in Perc
 
 ## Offene Punkte an 👌
 
-1. **Higgsfield-Zugang**: Die CLI (`@higgsfield/cli` 1.2.2, installiert) authentifiziert ausschließlich per Browser-OAuth mit Callback auf `localhost:8765` — auf dem Hermes-Host nicht abschließbar. Optionen: (a) API-Key aus `console.higgsfield.ai` (dann REST statt CLI), (b) `higgsfield auth login` lokal + Token-Datei herüberkopieren, (c) Bildwelt stattdessen über die bereits aktive FAL-Route (`nano-banana-pro`).
+1. ~~**Higgsfield-Zugang**~~ — ✅ **erledigt 2026-11-05**: CLI per OAuth-Callback-Interception angemeldet (`fritzian.flo@gmail.com`, basic). Ablauf: `docs/setup-higgsfield-cli.md`.
 2. **Domain-/Hosting-Zugang** und Verhältnis zur bisherigen Agentur (jeromedia.eu)?
-3. **Öffnungszeiten**: echte Zeiten inkl. Aussteck-Logik (nur an Ausstecktagen offen? oder täglich mit eingeschränkter Küche?) — Kerninformation der Seite.
+3. **Öffnungszeiten bestätigen**: Aus den Plakaten im Mirror ergibt sich achtmal Ausstecken 2026/2027, jeweils Sa–So, 2026 insgesamt 177 Tage. Der Website-Text sagt „bis zu zehn mal". Bitte kurz bestätigen, dann ist die Statusleiste final.
 4. **Ab-Hof-Verkauf**: soll der Relaunch eine Bestellstrecke bekommen (Wein + Heurigenboxen)?
 5. **Sprachvarianten**: nur DE, oder zusätzlich EN (Wien-Tourismus / Gäste)?
 

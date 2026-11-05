@@ -127,7 +127,7 @@ Der Seitenkopf-Banner lädt also von `localhost` → **die Hintergrundgrafik ist
 |---|---|
 | **Keine `tel:`-Links** (0 Treffer im gesamten Mirror) — Nummer nur als Fließtext | Auf iOS kostet jeder Anruf Copy-Paste — der wichtigste Kanal ist kaputt |
 | Reservierung nur über ein Formular der Redi-Erweiterung (40+ Zeit-Slots als Dropdown, Datum in 3 Feldern) | hohe Abbruchrate, Mobile unhandlich |
-| Öffnungszeiten nur als Prosa auf `/termine` („Mo–Sa 10:30–23:00, So 10:30–22:30"), im selben Absatz aber „**bis zu zehn mal** im Jahr geöffnet" | **widersprüchliche Kernaussage** — der Gast weiß nicht, wann offen ist |
+| Öffnungszeiten stehen nur als **Plakatgrafik** auf `/termine` (`ausstecken26`, `ausstecken27`) — als Text daneben „**bis zu zehn mal** im Jahr geöffnet", die Grafik selbst zeigt **acht** Termine | **widersprüchliche Kernaussage** + nicht durchsuchbar, nicht vorlesbar, nicht in strukturierten Daten abbildbar |
 | Nächster Ausstecktermin / Countdown nicht dauerhaft oben sichtbar | wichtigste Entscheidungsinfo nicht auf einen Blick |
 | Kontaktformular + „Newsletter abonnieren"-Checkbox (MC4WP) ohne Double-Opt-in-Hinweis | DSGVO-Risiko |
 | Google-Maps-iframe ohne Consent-Gate | DSGVO-Risiko (IP-Übermittlung an Google) |
@@ -175,7 +175,8 @@ Der Seitenkopf-Banner lädt also von `localhost` → **die Hintergrundgrafik ist
 1. **Doppel-Struktur**: Startseite ist eine lange Scroll-Seite, deren Inhalte zugleich unter eigenen URLs existieren (Termine, KOSTBAR, Heurigenboxen) → Pflege doppelt, SEO verwässert.
 2. **Navigation mit 10 Punkten** (Über, Ausgsteckt'is, Speisen, Schmankerl, Tagesmenüs, Weine, Feiern, Galerie, Reservierung, Kontakt) — Redundanz: „Speisen / Schmankerl / Tagesmenüs" gehören in **ein** Menü; „Ausgsteckt'is" ist lokaler Dialekt und Nicht-Einheimischen unverständlich („Termine" wäre klar).
 3. **Kein Shop**: WooCommerce ist installiert und aktiv, aber es gibt keinen kaufbaren Wein. Bei „Ab-Hof-Verkauf + 24h-Getränkeautomat" liegt ein **Direktverkauf-Kanal** auf der Hand.
-4. **Keine Ansprechperson/E-Mail** öffentlich (nur Telefon) — für Firmenanfragen („Feiern") zu wenig.
+4. **E-Mail nur versteckt**: `christian[at]weinbauneumayer.at` steht ausschließlich im Impressum (obfuskiert), nicht auf `/kontakt` oder `/feiern` — für Firmenanfragen („Feiern") zu wenig. *(Korrektur 2026-11-05: der erste Audit-Durchgang meldete „keine E-Mail vorhanden"; das war falsch.)*
+5. **Entscheidende Fakten existieren nur als Bild**: Die Ausstecktermine 2026/2027 (`ausstecken26`, `ausstecken27`), die Prämierungen 2025/26 (`auszeichnung`), der Ab-Hof-Verkauf samt Geschenkebox um € 65 (`abhofverkauf2`) und der KOSTBAR-Preis € 6,90 sind reine Plakatgrafiken. Folge: für Suchmaschinen, Screenreader und jeden, der die Grafik nicht öffnet, sind genau die Informationen unsichtbar, die den Besuch entscheiden. Zusätzlich fehlen zwei dort beworbene Weine (Pinot Noir, prämierter Riesling 2025) in der Weinliste auf `/weine`.
 
 ---
 
