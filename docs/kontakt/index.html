@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Besuch &amp; Kontakt — Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="demo-banner">
+  Designentwurf zur Ansicht — Inhalte teils Platzhalter, Bilder KI-generiert.
+  <a href="../design-draft/REDESIGN-DRAFT.md">Konzept lesen</a> ·
+  <a href="../design-draft/mockup.html">Startseiten-Mockup</a>
+</div>
+
+<div class="statusbar">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Ausg'steckt: 7.–8. November (Stelzen-Wochenende)</div>
+    <div>Zwischen den Terminen: Ab Hof &amp; Getränkeautomat rund um die Uhr</div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="./" aria-label="Weinbau und Heuriger Neumayer, Startseite">
+      <strong>Weinbau &amp; Heuriger Neumayer</strong>
+      <small>Perchtoldsdorf seit 1986</small>
+    </a>
+    <nav class="main" aria-label="Hauptnavigation">
+      <a href="../termine/">Termine</a>
+      <a href="../speisen-wein/">Speisen &amp; Wein</a>
+      <a href="../ab-hof/">Ab Hof</a>
+      <a href="../feiern/">Feiern</a>
+      <a href="../kontakt/" aria-current="page">Besuch &amp; Kontakt</a>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="tel:+436642110825">0664 2110825</a>
+      <a class="btn btn-primary" href="../kontakt/#reservieren">Tisch reservieren</a>
+      <button class="burger" aria-label="Menü öffnen">
+        <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="2" y="0" fill="#1F1B17"/><rect width="20" height="2" y="6" fill="#1F1B17"/><rect width="20" height="2" y="12" fill="#1F1B17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <p class="kicker">Besuch &amp; Kontakt</p>
+    <h1>Wir freuen uns auf Ihren Besuch</h1>
+    <p>Sonnbergstraße 89, 2380 Perchtoldsdorf — wenige Kilometer von Wien entfernt, mitten im Weinbaugebiet Thermenregion.</p>
+  </div>
+</div>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="grid g3">
+      <div class="box">
+        <h3>Adresse</h3>
+        <p>Weinbau &amp; Heuriger Neumayer<br>Sonnbergstraße 89<br>2380 Perchtoldsdorf<br>Österreich</p>
+        <p><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Weinbau+%26+Heuriger+Neumayer+Sonnbergstra%C3%9Fe+89+Perchtoldsdorf" target="_blank" rel="noopener">Route planen</a></p>
+      </div>
+      <div class="box">
+        <h3>Kontakt</h3>
+        <p>Telefon <a href="tel:+436642110825">+43 664 211 08 25</a><br>
+        E-Mail <a href="mailto:christian@weinbauneumayer.at">christian@weinbauneumayer.at</a></p>
+        <p><a class="btn btn-primary" href="tel:+436642110825">Jetzt anrufen</a></p>
+      </div>
+      <div class="box">
+        <h3>Öffnungszeiten</h3>
+        <p class="hours">Montag bis Samstag<br>10:30 – 23:00<br><br>Sonntag &amp; Feiertag<br>10:30 – 22:30</p>
+        <p>Diese Zeiten gelten während der Aussteckzeiten. Außerhalb: Ab-Hof-Verkauf nach Vereinbarung, Getränkeautomat rund um die Uhr.</p>
+      </div>
+    </div>
+    <div class="note">Auf der bestehenden Seite gibt es <b>keinen einzigen <code>tel:</code>-Link</b> — die Telefonnummer steht nur als Fließtext, auf dem Handy ist Anrufen damit Copy-and-paste. Hier ist jede Nummer antippbar. Die Anfahrtskarte wird als Link geöffnet, nicht als Google-Maps-iframe eingebettet: Das spart das Einwilligungs-Banner.</div>
+  </div>
+</section>
+
+<section id="reservieren" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Reservierung</p>
+      <h2>Tisch reservieren</h2>
+      <p>Drei Schritte, keine Registrierung. An Tagen ohne Ausstecken ist keine Reservierung möglich — für Feiern nutzen Sie bitte die <a href="../feiern/#anfrage">Feieranfrage</a>.</p>
+    </div>
+    <form class="demo" onsubmit="return false">
+      <div>
+        <label for="tag">Wunschtag</label>
+        <input id="tag" type="date" min="2026-11-07">
+      </div>
+      <div>
+        <label for="zeit">Uhrzeit</label>
+        <select id="zeit"><option>11:30</option><option>12:00</option><option>12:30</option><option>13:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option></select>
+      </div>
+      <div>
+        <label for="personen">Personen</label>
+        <input id="personen" type="text" inputmode="numeric" placeholder="z. B. 4">
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" autocomplete="name">
+      </div>
+      <div>
+        <label for="kontakt">Telefon oder E-Mail (für die Bestätigung)</label>
+        <input id="kontakt" type="text" autocomplete="tel">
+      </div>
+      <div>
+        <button class="btn btn-primary" type="submit">Reservierung anfragen</button>
+      </div>
+    </form>
+    <div class="note">Demo — das Formular ist funktionslos. Im fertigen Aufbau sind nur Ausstecktage wählbar, ab 11 Personen leitet es automatisch zur Feieranfrage, und die Bestätigung kommt sofort per SMS oder E-Mail.</div>
+  </div>
+</section>
+
+<section id="anfahrt">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Anfahrt</p>
+      <h2>Mitten in Perchtoldsdorf</h2>
+      <p>Die Sonnbergstraße liegt im Ortskern von Perchtoldsdorf, wenige Minuten von der Kaltenleutgebner Bahn und der Wiener Stadtgrenze entfernt. Der Gastgarten liegt direkt beim Haus.</p>
+      <p><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Weinbau+%26+Heuriger+Neumayer+Sonnbergstra%C3%9Fe+89+Perchtoldsdorf" target="_blank" rel="noopener">In Google Maps öffnen</a></p>
+    </div>
+    <img src="../assets/fackelwanderung.jpg" alt="Weingärten über Perchtoldsdorf im Abendlicht" loading="lazy">
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Weinbau &amp; Heuriger Neumayer</h4>
+        <p style="color:rgba(237,231,218,.72)">Familienbetrieb in Perchtoldsdorf. Eigener Weinbau, Heuriger mit Küche, Gastgarten und Stüberl für Feiern.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="../termine/">Termine</a></li>
+          <li><a href="../speisen-wein/">Speisen &amp; Wein</a></li>
+          <li><a href="../ab-hof/">Ab Hof</a></li>
+          <li><a href="../feiern/">Feiern</a></li>
+          <li><a href="../kontakt/">Besuch &amp; Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Öffnungszeiten</h4>
+        <ul class="hours">
+          <li>Mo–Sa 10:30–23:00</li>
+          <li>So 10:30–22:30</li>
+          <li style="margin-top:8px">nur während der Aussteckzeiten</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Sonnbergstraße 89<br>2380 Perchtoldsdorf</li>
+          <li><a href="tel:+436642110825">+43 664 211 08 25</a></li>
+          <li><a href="mailto:christian@weinbauneumayer.at">christian@weinbauneumayer.at</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Weinbau &amp; Heuriger Neumayer · Designentwurf</span>
+      <span><a href="../impressum/">Impressum</a> · <a href="../datenschutz/">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="group" aria-label="Schnellaktionen">
+  <a class="btn btn-ghost" href="tel:+436642110825">Anrufen</a>
+  <a class="btn btn-primary" href="../kontakt/#reservieren">Reservieren</a>
+  <a class="btn btn-ghost" href="../kontakt/#anfahrt">Route</a>
+</div>
+</body>
+</html>

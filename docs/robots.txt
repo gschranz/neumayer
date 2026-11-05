@@ -1,0 +1,3 @@
+# Demo-Entwurf: bewusst aus dem Index gehalten
+User-agent: *
+Disallow: /

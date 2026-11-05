@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Feiern &amp; Seminare — Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="demo-banner">
+  Designentwurf zur Ansicht — Inhalte teils Platzhalter, Bilder KI-generiert.
+  <a href="../design-draft/REDESIGN-DRAFT.md">Konzept lesen</a> ·
+  <a href="../design-draft/mockup.html">Startseiten-Mockup</a>
+</div>
+
+<div class="statusbar">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span> Ausg'steckt: 7.–8. November (Stelzen-Wochenende)</div>
+    <div>Zwischen den Terminen: Ab Hof &amp; Getränkeautomat rund um die Uhr</div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="./" aria-label="Weinbau und Heuriger Neumayer, Startseite">
+      <strong>Weinbau &amp; Heuriger Neumayer</strong>
+      <small>Perchtoldsdorf seit 1986</small>
+    </a>
+    <nav class="main" aria-label="Hauptnavigation">
+      <a href="../termine/">Termine</a>
+      <a href="../speisen-wein/">Speisen &amp; Wein</a>
+      <a href="../ab-hof/">Ab Hof</a>
+      <a href="../feiern/" aria-current="page">Feiern</a>
+      <a href="../kontakt/">Besuch &amp; Kontakt</a>
+    </nav>
+    <div class="navcta">
+      <a class="btn btn-ghost" href="tel:+436642110825">0664 2110825</a>
+      <a class="btn btn-primary" href="../kontakt/#reservieren">Tisch reservieren</a>
+      <button class="burger" aria-label="Menü öffnen">
+        <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="2" y="0" fill="#1F1B17"/><rect width="20" height="2" y="6" fill="#1F1B17"/><rect width="20" height="2" y="12" fill="#1F1B17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <p class="kicker">Feiern &amp; Seminare</p>
+    <h1>Ob Firmenfeier, Hochzeit oder Seminar</h1>
+    <p>Bei uns richten Sie Ihre Veranstaltung aus, wann und wie Sie möchten — unabhängig davon, ob wir gerade ausgesteckt haben.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="grid g3">
+      <div class="box"><h3>Hochzeit &amp; Familie</h3><p>Geburtstag im kleinen Rahmen oder die ganze Hochzeitsgesellschaft. Kinderspielplatz und Spielecke im Gastraum für die Kleinen.</p></div>
+      <div class="box"><h3>Firma &amp; Seminar</h3><p>Räumlichkeiten für Seminare und Weihnachtsfeiern, Menü nach Absprache, Weinverkostung als Programmpunkt.</p></div>
+      <div class="box"><h3>Zwei Ebenen &amp; Stüberl</h3><p>Das Lokal teilt sich auf zwei Ebenen auf und bietet zusätzlich ein eigenes Stüberl für Ihre Veranstaltung. Im Sommer der Gastgarten.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Besonderes Highlight</p>
+      <h2>Fackelwanderung</h2>
+      <p>Jedes Event verdient es, unvergesslich zu werden. Wir verteilen unter all Ihren Gästen Fackeln und wandern gemeinsam zu einem unserer Weingärten auf die Perchtoldsdorfer Heide — rund 20 Minuten Fußweg. Oben angekommen erwartet Ihre Gäste eine kleine Erfrischung und ein unglaublicher Blick über ganz Wien.</p>
+      <p><a class="btn btn-white" href="#anfrage">Fackelwanderung anfragen</a></p>
+    </div>
+    <img src="../assets/fackelwanderung.jpg" alt="Fackeln auf einem Weg durch die Weingärten, im Hintergrund die Lichter Wiens" loading="lazy">
+  </div>
+</section>
+
+<section id="anfrage">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">Anfrage</p>
+      <h2>Sagen Sie uns, was Sie vorhaben</h2>
+      <p>Ihr Ansprechpartner: <b>Christian Neumayer</b> · <a href="tel:+436642110825">0664 211 08 25</a> · <a href="mailto:christian@weinbauneumayer.at">christian@weinbauneumayer.at</a></p>
+      <form class="demo" onsubmit="return false">
+        <div>
+          <label for="anlass">Anlass</label>
+          <select id="anlass"><option>Geburtstag</option><option>Hochzeit</option><option>Firmenfeier</option><option>Seminar</option><option>Sonstiges</option></select>
+        </div>
+        <div>
+          <label for="datum">Wunschtermin</label>
+          <input id="datum" type="date">
+        </div>
+        <div>
+          <label for="gaeste">Anzahl der Gäste</label>
+          <input id="gaeste" type="text" inputmode="numeric">
+        </div>
+        <div>
+          <label for="wunsch">Ihre Wünsche</label>
+          <textarea id="wunsch" placeholder="Menü, Fackelwanderung, Musik, Technik …"></textarea>
+        </div>
+        <div>
+          <label for="name">Name und Kontakt</label>
+          <input id="name" type="text" autocomplete="name">
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit">Unverbindlich anfragen</button>
+        </div>
+      </form>
+      <div class="note">Demo — im fertigen Aufbau wird die Anfrage per E-Mail zugestellt. Wir richten Ihre Veranstaltung auch außerhalb unserer regulären Aussteckzeiten aus.</div>
+    </div>
+    <img src="../assets/hero-terrasse.jpg" alt="Gedeckte Tafel im Gastgarten des Heurigen" loading="lazy">
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Weinbau &amp; Heuriger Neumayer</h4>
+        <p style="color:rgba(237,231,218,.72)">Familienbetrieb in Perchtoldsdorf. Eigener Weinbau, Heuriger mit Küche, Gastgarten und Stüberl für Feiern.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="../termine/">Termine</a></li>
+          <li><a href="../speisen-wein/">Speisen &amp; Wein</a></li>
+          <li><a href="../ab-hof/">Ab Hof</a></li>
+          <li><a href="../feiern/">Feiern</a></li>
+          <li><a href="../kontakt/">Besuch &amp; Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Öffnungszeiten</h4>
+        <ul class="hours">
+          <li>Mo–Sa 10:30–23:00</li>
+          <li>So 10:30–22:30</li>
+          <li style="margin-top:8px">nur während der Aussteckzeiten</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Sonnbergstraße 89<br>2380 Perchtoldsdorf</li>
+          <li><a href="tel:+436642110825">+43 664 211 08 25</a></li>
+          <li><a href="mailto:christian@weinbauneumayer.at">christian@weinbauneumayer.at</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Weinbau &amp; Heuriger Neumayer · Designentwurf</span>
+      <span><a href="../impressum/">Impressum</a> · <a href="../datenschutz/">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="group" aria-label="Schnellaktionen">
+  <a class="btn btn-ghost" href="tel:+436642110825">Anrufen</a>
+  <a class="btn btn-primary" href="../kontakt/#reservieren">Reservieren</a>
+  <a class="btn btn-ghost" href="../kontakt/#anfahrt">Route</a>
+</div>
+</body>
+</html>
