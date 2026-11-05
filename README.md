@@ -3,6 +3,8 @@
 Audit, Redesign-Draft und Umsetzungsbasis für **www.weinbauneumayer.at** — Weinbau & Heuriger Neumayer, Sonnbergstraße 89, 2380 Perchtoldsdorf (Niederösterreich).
 
 > Stand: 2026-11-05 · Auftrag: Audit + Redesign-Draft (Higgsfield-Visuals + Opus-Agent)
+>
+> **Demo live:** https://gschranz.github.io/neumayer/ — bewusst `noindex` (Entwurf, nicht die offizielle Seite des Betriebs)
 
 ---
 
@@ -13,6 +15,7 @@ Audit, Redesign-Draft und Umsetzungsbasis für **www.weinbauneumayer.at** — We
 | `REPORT.md` | **Website-Audit** — Stack, Performance, SEO, Accessibility, Security, Inhaltsinventar, Top-10-Befunde mit Priorisierung |
 | `PROJEKTPLAN.md` | Projektplan, Risiko-Radar, Meilensteine, offene Punkte |
 | `.kanban/BOARD.md` | Kanban-Board (Arbeitspakete A–D) |
+| `docs/` | **Demo-Site** (GitHub Pages, Quelle `/docs`): Startseite + Termine, Speisen & Wein, Ab Hof, Feiern, Besuch & Kontakt, Impressum, Datenschutz — erzeugt aus `scripts/build_demo.py` |
 | `docs/design-draft/REDESIGN-DRAFT.md` | Redesign-Konzept (Opus-Agent): IA, Seitenkonzepte, Textenwürfe, Tokens, Schema, Phasen |
 | `docs/design-draft/mockup.html` | Klickbarer High-Fidelity-Mockup der neuen Startseite (responsive) |
 | `docs/design-draft/mockup-desktop-preview.jpg` | Render Desktop (1000 px Breite) |

@@ -73,7 +73,8 @@ Moderner, mobile-first Auftritt für einen Familien-Heurigen mit Weinbau in Perc
 |---|---|---|
 | M1: Audit + Report + Draft im Repo | ✅ 2026-11-05 | — |
 | M2: Quick-Win-Patchliste an Agentur/Betreiber | TBD | Freigabe M1 |
-| M3: Bildwelt + Wizard-of-Oz-Mockup (klickbar) | TBD | Fotos, Entscheidung §Offene Punkte |
+| M3: Bildwelt + klickbares Demo (GitHub Pages) | ✅ 2026-11-05 | Fotos; Entscheidung §Offene Punkte |
+| **Demo live:** https://gschranz.github.io/neumayer/ (Quelle `/docs`, `noindex`) | | |
 | M4: Umsetzung Frontend | TBD | M3 + Hosting |
 | M5: Go-Live + Redirects + Search Console | TBD | M4 |
 

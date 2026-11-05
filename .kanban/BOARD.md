@@ -31,7 +31,6 @@
 
 ### :red_circle: Backlog
 
-- **B-04** Klickbares Mockup (HTML) mit echter Bildwelt — *wartet auf Bildwelt :hourglass_flowing_sand:*
 - **B-05** Reservierungs-Flow als Wireframe (3 Schritte) — *wartet auf Klärung Öffnungszeiten :hourglass_flowing_sand:*
 
 ### :yellow_circle: In Progress
@@ -45,6 +44,7 @@
 ### :white_check_mark: Done
 
 - **B-02** High-Fidelity-Hero-Mockup mit generiertem Bildmaterial (Higgsfield CLI `nano_banana_pro`, 2k)
+- **B-04** Klickbares Demo auf GitHub Pages — https://gschranz.github.io/neumayer/ (8 Seiten, Quelle `docs/`, Generator `scripts/build_demo.py`)
 - **B-03** Design-Tokens (Farbwelt, Typo, Abstände) aus Bestandslogo abgeleitet
 
 ---
