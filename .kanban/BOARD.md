@@ -44,7 +44,7 @@
 
 ### :white_check_mark: Done
 
-- **B-02** High-Fidelity-Hero-Mockup mit generiertem Bildmaterial (FAL `nano-banana-pro`)
+- **B-02** High-Fidelity-Hero-Mockup mit generiertem Bildmaterial (Higgsfield CLI `nano_banana_pro`, 2k)
 - **B-03** Design-Tokens (Farbwelt, Typo, Abstände) aus Bestandslogo abgeleitet
 
 ---

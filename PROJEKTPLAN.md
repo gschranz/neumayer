@@ -63,7 +63,7 @@ Moderner, mobile-first Auftritt für einen Familien-Heurigen mit Weinbau in Perc
 | Öffnungszeiten widersprüchlich („Mo–Sa 10:30–23:00" vs. „bis zu zehn mal im Jahr") | 🟡 fachlich klären | Betreiber-Interview nötig vor IA-Finalisierung |
 | WooCommerce aktiv, aber ungenutzt (Shop-Ballast, Sicherheitsfläche) | 🟡 offen | Beim Relaunch entscheiden: Ab-Hof-Bestellstrecke ja/nein |
 | Bestehende Agentur (jeromedia.eu) hält Zugänge | 🟡 offen | Zugänge klären, bevor Umsetzung startet |
-| Higgsfield-CLI benötigt Browser-OAuth (localhost-Callback) | 🔴 blockiert | Siehe §Offene Punkte — API-Key oder lokaler Login nötig |
+| Higgsfield-CLI: Browser-OAuth-Callback zeigt auf `localhost:8765` | ✅ gelöst 2026-11-05 | Callback-URL aus der Adresszeile an den lokalen Listener gereicht (PKCE bleibt gültig); Ablauf dokumentiert in `docs/setup-higgsfield-cli.md` |
 
 ---
 
